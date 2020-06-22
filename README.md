@@ -3,7 +3,7 @@
 It is a voice enabled bot for students which can understand your voice command inputs, search online sources, and summarizes to read out information.
 
 # Roadmap
-1. Statistical model to determine category such as _who_, _why_, _what_, and _when_ of knowledge questions.
+1. Statistical model to determine category such as _why_, _who_, _what_, and _when_ of knowledge questions.
 2. Headlines-only news request.
 
 # Introduction
@@ -12,7 +12,7 @@ Natural yet rich conversational experiences are being built today using voice en
 This bot has been built from scratch. It understand and answer simple questions like:
 - What is Dexterity Global?
 - Who is Sharad Sagar?
-- What is Covid?
+- What is Covid-19?
 - Who Swami Vivekananda?
 - Give me news about the ICMR.
 
@@ -21,7 +21,7 @@ Our goal is to code a bot from scratch and use [nature language processing (NLP)
 Also in addition, our bot aims to be voice-enabled and web-based after the completion of the web app section. The best part is we do not need to build anything too complicated for speech recognition and synthesis: we will use a [built-in](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) capability of modern web browsers.
 
 # Overview
-At a high level, we want to be able to understand two broad types of queries. Following is the flowchart.
+The two broad types of queries are illustrated using the flowchart.
 
 ![Dexbot flow diagram](flowdiagram.png "Dexbot flow diagram")
 
@@ -104,7 +104,7 @@ We invoke [`get_news_tokens`](query_extractor.py#L40) from the [`QueryExtractor`
 
 Next, we invoke the [`get_news`](media_aggregator.py#L67) function using _query_ on one of the `Aggregator` classes in [media_aggregator.py](media_aggregator.py) based on the _source_. This returns a list of news articles that were sent as a response by the news API. We currently support [The Guardian API](http://open-platform.theguardian.com/) and [The New York Times API](https://developer.nytimes.com/).
 
-Finally, we pick the first item (by default) from the _response_ list and summarize it using the [`shorten_news`](https://github.com/shaildeliwala/delbot/blob/master/media_aggregator.py#L76) function.
+Finally, we pick the first item (by default) from the _response_ list and summarize it using the [`shorten_news`](https://github.com/ritu01rt/NLP-based-voice-enabled-chatbot/blob/master/media_aggregator.py#L67) function.
 
 ## Knowledge Queries
 We assume input to be of one of the following forms.
@@ -193,7 +193,7 @@ We add a cool webpage from which you can fire off voice queries and have the bro
 ## Web Service
 We get our Flask-based REST web service up and running in under 20 lines of code. The [`QueryService`](resources/query_service.py#L27) class handles requests.
 
-As of now, we only need one service call to send input from our web app to our bot. This is done through the [`post`](resources/query_service.py#L28) function of the `QueryService` class. `post`, in turn, calls the `predict` function, which is the main entry point as mentioned [above](https://github.com/shaildeliwala/delbot#how-it-works).
+As of now, we only need one service call to send input from our web app to our bot. This is done through the [`post`](resources/query_service.py#L28) function of the `QueryService` class. `post`, in turn, calls the `predict` function, which is the main entry point as mentioned.
 
 ## Web Site
 I built a basic webpage to demonstrate the bot. It uses the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) to receive voice input and read out content. You can find the [index.html](templates/index.html) file in the templates folder. Make sure you have installed all the required packages and libraries, and that the web service is up and running before you open the website.
@@ -247,4 +247,4 @@ We could implement a machine learning-based solution so our bot could potentiall
 
 Please make sure to read the terms of use of the APIs used here.
 <hr>
-Check out the demo [video](https://youtu.be/iVmj1gHOF0w) or read my Delbot article published in [Chatbots Magazine](https://chatbotsmagazine.com/delbot-nlp-python-bot-1a46d865e38b).
+
