@@ -1,63 +1,29 @@
-# Dexbot™
+# Dexbot
 
-It understands your voice commands, searches news and knowledge sources, and summarizes and reads out content to you.
-
-Check out the demo [video](https://youtu.be/iVmj1gHOF0w).
-
-# How to Run
-1. Install the required [packages](https://github.com/shaildeliwala/delbot#libraries).
-2. Open a command prompt and navigate to root folder of project.
-3. Enter `python app.py` in command prompt to launch web service.
-4. Go to http://localhost:5000 (or whichever IP and port you specified).
+It is a voice enabled bot for students which can understand your voice command inputs, search online sources, and summarizes to read out information.
 
 # Roadmap
 1. Statistical model to determine category such as _who_, _why_, _what_, and _when_ of knowledge questions.
 2. Headlines-only news request.
-3. Better UI!
-
-# Index
-1. [Introduction](https://github.com/shaildeliwala/delbot#introduction)
-2. [Overview](https://github.com/shaildeliwala/delbot#overview)
-    1. [News](https://github.com/shaildeliwala/delbot#news)
-    2. [Knowledge](https://github.com/shaildeliwala/delbot#knowledge)
-3. [How It Works](https://github.com/shaildeliwala/delbot#how-it-works)
-    1. [News Queries](https://github.com/shaildeliwala/delbot#news-queries)
-        1. [Parts of speech and tags](https://github.com/shaildeliwala/delbot#parts-of-speech-and-tags)
-        2. [Noun chunks](https://github.com/shaildeliwala/delbot#noun-chunks)
-        3. [Adpositions? Did you mean prepositions?](https://github.com/shaildeliwala/delbot#adpositions-did-you-mean-prepositions)
-        4. [Implementation](https://github.com/shaildeliwala/delbot#implementation)
-    2. [Knowledge Queries](https://github.com/shaildeliwala/delbot#knowledge-queries)
-        1. [Parts of speech and tags](https://github.com/shaildeliwala/delbot#parts-of-speech-and-tags-1)
-        2. [Noun chunks](https://github.com/shaildeliwala/delbot#noun-chunks-1)
-        3. [Auxiliary verbs (or their absence)](https://github.com/shaildeliwala/delbot#auxiliary-verbs-or-their-absence)
-        4. [Implementation](https://github.com/shaildeliwala/delbot#implementation-1)
-4. [Summarization](https://github.com/shaildeliwala/delbot#summarization)
-5. [Libraries](https://github.com/shaildeliwala/delbot#libraries)
-6. [Web App](https://github.com/shaildeliwala/delbot#web-app-optional)
-7. [Limitations](https://github.com/shaildeliwala/delbot#limitations)
-8. [Conclusion and Future Work](https://github.com/shaildeliwala/delbot#conclusion-and-future-work)
-9. [Demo](https://github.com/shaildeliwala/delbot#demo)
-10. [References and Links](https://github.com/shaildeliwala/delbot#references-and-links)
 
 # Introduction
-Bots remain a hot topic. Everyone is talking about them.
+Natural yet rich conversational experiences are being built today using voice enabled assistants to get the desired response.
 
-How about building one from scratch? The simple one we will build today will understand and answer questions like:
-- What is the latest news on Star Wars in the New York Times?
-- Who is Donald Trump?
-- Read me the latest on Brexit.
-- What are RDF triples?
-- Who was Joan of Arc?
-- Give me news about the UK government from the Guardian.
+This bot has been built from scratch. It understand and answer simple questions like:
+- What is Dexterity Global?
+- Who is Sharad Sagar?
+- What is Covid?
+- Who Swami Vivekananda?
+- Give me news about the ICMR.
 
-Our goal is to code a bot from the ground up and use [nature language processing (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing) while doing so.
+Our goal is to code a bot from scratch and use [nature language processing (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing) while doing so.
 
-In addition, our bot will be voice-enabled and web-based if you complete the web app section as well. The best part is we do not need to do anything fancy for speech recognition and synthesis: we will use a [built-in](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) capability of modern web browsers.
+Also in addition, our bot aims to be voice-enabled and web-based after the completion of the web app section. The best part is we do not need to build anything too complicated for speech recognition and synthesis: we will use a [built-in](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) capability of modern web browsers.
 
 # Overview
 At a high level, we want to be able to understand two broad types of queries. Following is the flowchart.
 
-![Delbot flow diagram](flowdiagram.png "Delbot flow diagram")
+![Dexbot flow diagram](flowdiagram.png "Dexbot flow diagram")
 
 
 ## News
