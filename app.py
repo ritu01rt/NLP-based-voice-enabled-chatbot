@@ -33,10 +33,10 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/favicon.ico")
+@app.route("/dg logo.jpg")
 def favicon():
     from os import path
-    return send_from_directory(path.join(app.root_path, "static"), "favicon.ico", mimetype = "image/vnd.microsoft.icon")
+    return send_from_directory(path.join(app.root_path, "static"), "dg logo.jpg")
 
 
 @app.after_request
